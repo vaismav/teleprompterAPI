@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/telepromterApi/static/css/main.073c9b0a.css",
+    "main.js": "/telepromterApi/static/js/main.62061425.js",
+    "static/js/787.0502b4a7.chunk.js": "/telepromterApi/static/js/787.0502b4a7.chunk.js",
+    "index.html": "/telepromterApi/index.html",
+    "main.073c9b0a.css.map": "/telepromterApi/static/css/main.073c9b0a.css.map",
+    "main.62061425.js.map": "/telepromterApi/static/js/main.62061425.js.map",
+    "787.0502b4a7.chunk.js.map": "/telepromterApi/static/js/787.0502b4a7.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.62061425.js"
+  ]
+}
