@@ -42,7 +42,7 @@ function App() {
     setText(e.target.value);
   };
   return (
-    <div style={{ height: window.innerHeight, textAlign: "center", background: "black", color: "white" }}>
+    <div style={{ height: window.innerHeight, background: "black", color: "white" }}>
       <Stack spacing={2}>
         <Stack direction="row" spacing={1}>
           <button onClick={() => setTextSize((prev) => prev + 1)}>A+</button>
@@ -62,13 +62,17 @@ function App() {
           onChange={onTextChange}
           value={text}
           inputProps={{ style: { fontSize: 4 * textSize, lineHeight: "normal", fontWeight: 600, color: "white" } }}
-          sx={{ transform: `scaleX(${isFlipped ? "-1" : "1"})`, background: "black", direction: isRtl ? "rtl" : "ltr" }}
+          sx={{
+            transform: `scaleX(${isFlipped ? "-1" : "1"})`,
+            background: "black",
+            direction: isRtl ? "rtl" : "ltr",
+          }}
         />
-        <h3> APIs:</h3>
+        <h3> queries API:</h3>
         <p>text:string</p>
         <p>size:number</p>
-        <p>flip:string {" any non-empty input will set it true"}</p>
-        <p>direction: string "rtl" {" any other input will end in ltr direction"}</p>
+        <p>flip:string {" (any non-empty input will set it true)"}</p>
+        <p>direction: string "rtl" {" (any other input will end in ltr direction)"}</p>
       </Stack>
     </div>
   );
