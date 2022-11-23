@@ -5,8 +5,7 @@ import "./App.css";
 
 const getQuery = (str) => {
   const current_url = new URL(window.location.href);
-  const search_params = current_url.searchParams;
-  return search_params.get(str);
+  return current_url.searchParams.get(str);
 };
 
 function App() {
@@ -42,12 +41,11 @@ function App() {
     setText(e.target.value);
   };
   return (
-    <div style={{ height: window.innerHeight, background: "black", color: "white" }}>
+    <div style={{ height: "100%", background: "black", color: "white" }}>
       <Stack spacing={2}>
-        <Stack direction="row" spacing={1}>
+        <Stack direction="row" spacing={1} sx={{ paddingTop: 3 }}>
           <button onClick={() => setTextSize((prev) => prev + 1)}>A+</button>
           <button onClick={() => setTextSize((prev) => (prev === 1 ? 1 : prev - 1))}>A-</button>
-          <button onClick={() => setIsFlipped((prev) => !prev)}>Mirror</button>
           <button onClick={() => setIsFlipped((prev) => !prev)}>Mirror</button>
           <button onClick={() => setIsRtl((prev) => !prev)}>
             Set Direction to {isRtl ? "Left to Right" : "Right to Left"}
