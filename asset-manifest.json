@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/telepromterApi/static/css/main.073c9b0a.css",
-    "main.js": "/telepromterApi/static/js/main.ec543c1f.js",
-    "static/js/787.0502b4a7.chunk.js": "/telepromterApi/static/js/787.0502b4a7.chunk.js",
-    "index.html": "/telepromterApi/index.html",
-    "main.073c9b0a.css.map": "/telepromterApi/static/css/main.073c9b0a.css.map",
-    "main.ec543c1f.js.map": "/telepromterApi/static/js/main.ec543c1f.js.map",
-    "787.0502b4a7.chunk.js.map": "/telepromterApi/static/js/787.0502b4a7.chunk.js.map"
+    "main.css": "/teleprompterAPI/static/css/main.073c9b0a.css",
+    "main.js": "/teleprompterAPI/static/js/main.8bd2712f.js",
+    "static/js/787.0502b4a7.chunk.js": "/teleprompterAPI/static/js/787.0502b4a7.chunk.js",
+    "index.html": "/teleprompterAPI/index.html",
+    "main.073c9b0a.css.map": "/teleprompterAPI/static/css/main.073c9b0a.css.map",
+    "main.8bd2712f.js.map": "/teleprompterAPI/static/js/main.8bd2712f.js.map",
+    "787.0502b4a7.chunk.js.map": "/teleprompterAPI/static/js/787.0502b4a7.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.ec543c1f.js"
+    "static/js/main.8bd2712f.js"
   ]
 }
