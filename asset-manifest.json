@@ -1,15 +1,13 @@
 {
   "files": {
-    "main.css": "/teleprompterAPI/static/css/main.073c9b0a.css",
-    "main.js": "/teleprompterAPI/static/js/main.8bd2712f.js",
-    "static/js/787.0502b4a7.chunk.js": "/teleprompterAPI/static/js/787.0502b4a7.chunk.js",
-    "index.html": "/teleprompterAPI/index.html",
-    "main.073c9b0a.css.map": "/teleprompterAPI/static/css/main.073c9b0a.css.map",
-    "main.8bd2712f.js.map": "/teleprompterAPI/static/js/main.8bd2712f.js.map",
-    "787.0502b4a7.chunk.js.map": "/teleprompterAPI/static/js/787.0502b4a7.chunk.js.map"
+    "main.css": "/teleprompterAPI/static/css/main.ba17183d.css",
+    "main.js": "/teleprompterAPI/static/js/main.c20ba1a1.js",
+    "static/js/27.002cfef0.chunk.js": "/teleprompterAPI/static/js/27.002cfef0.chunk.js",
+    "static/media/flip.svg": "/teleprompterAPI/static/media/flip.0ddc573c9094fdf42437d00f10d6b3b1.svg",
+    "index.html": "/teleprompterAPI/index.html"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.8bd2712f.js"
+    "static/css/main.ba17183d.css",
+    "static/js/main.c20ba1a1.js"
   ]
 }
