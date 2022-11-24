@@ -55,10 +55,17 @@ function App() {
           <button onClick={() => setTextSize((prev) => prev + 1)}>A+</button>
           <button onClick={() => setTextSize((prev) => (prev === 1 ? 1 : prev - 1))}>A-</button>
           <button onClick={() => setIFlipped_H((prev) => !prev)}>
-            <img src={flip_icon} />
+            <img
+              src={flip_icon}
+              title="Horizontal Flip Button. Icon by Free Preloaders on https://freeicons.io/profile/726"
+            />
           </button>
           <button onClick={() => setIFlipped_V((prev) => !prev)}>
-            <img src={flip_icon} style={{ transform: "rotate(90deg)" }} />
+            <img
+              src={flip_icon}
+              title="Vertical Flip Button. Icon by Free Preloaders on https://freeicons.io/profile/726"
+              style={{ transform: "rotate(90deg)" }}
+            />
           </button>
           <button onClick={() => setIsRtl((prev) => !prev)}>
             Set Direction to {isRtl ? "Left to Right" : "Right to Left"}
