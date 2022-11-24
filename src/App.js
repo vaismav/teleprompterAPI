@@ -1,5 +1,6 @@
 import { Stack } from "@mui/material";
 import TextField from "@mui/material/TextField";
+import { flip_icon } from "./icons";
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -11,13 +12,15 @@ const getQuery = (str) => {
 function App() {
   const [text, setText] = useState("");
   const [textSize, setTextSize] = useState(4);
-  const [isFlipped, setIsFlipped] = useState(false);
+  const [isFlipped_H, setIFlipped_H] = useState(false);
+  const [isFlipped_V, setIFlipped_V] = useState(false);
   const [isRtl, setIsRtl] = useState(false);
 
   useEffect(() => {
     const textQuery = getQuery("text");
     const sizeQuery = parseInt(getQuery("size"), 10);
-    const flippedQuery = getQuery("flip");
+    const flippedHQuery = getQuery("hflip");
+    const flippedVQuery = getQuery("vflip");
     const directionQuery = getQuery("direction");
 
     if (textQuery) {
@@ -28,9 +31,14 @@ function App() {
       setTextSize(sizeQuery);
     }
 
-    if (flippedQuery) {
-      setIsFlipped(true);
+    if (flippedHQuery) {
+      setIFlipped_H(true);
     }
+
+    if (flippedVQuery) {
+      setIFlipped_V(true);
+    }
+
     if (directionQuery && directionQuery.toLowerCase() === "rtl") {
       setIsRtl(true);
     }
@@ -46,7 +54,12 @@ function App() {
         <Stack direction="row" spacing={1} sx={{ paddingTop: 3 }}>
           <button onClick={() => setTextSize((prev) => prev + 1)}>A+</button>
           <button onClick={() => setTextSize((prev) => (prev === 1 ? 1 : prev - 1))}>A-</button>
-          <button onClick={() => setIsFlipped((prev) => !prev)}>Mirror</button>
+          <button onClick={() => setIFlipped_H((prev) => !prev)}>
+            <img src={flip_icon} />
+          </button>
+          <button onClick={() => setIFlipped_V((prev) => !prev)}>
+            <img src={flip_icon} style={{ transform: "rotate(90deg)" }} />
+          </button>
           <button onClick={() => setIsRtl((prev) => !prev)}>
             Set Direction to {isRtl ? "Left to Right" : "Right to Left"}
           </button>
@@ -61,15 +74,21 @@ function App() {
           value={text}
           inputProps={{ style: { fontSize: 4 * textSize, lineHeight: "normal", fontWeight: 600, color: "white" } }}
           sx={{
-            transform: `scaleX(${isFlipped ? "-1" : "1"})`,
+            transform: `scale(${isFlipped_H ? "-1" : "1"},${isFlipped_V ? "-1" : "1"})`,
             background: "black",
             direction: isRtl ? "rtl" : "ltr",
           }}
         />
+        <p style={{ padding: 30, width: "100%", textAlign: "center" }}>
+          {" "}
+          Missing any thing? Have a suggestions? Want to contribute? you can create a new issue{" "}
+          <a href="https://github.com/vaismav/teleprompterAPI/issues">HERE {":)"}</a>
+        </p>
         <h3> queries API:</h3>
         <p>text:string</p>
         <p>size:number</p>
-        <p>flip:string {" (any non-empty input will set it true)"}</p>
+        <p>hflip:string {" horizontal flip (any non-empty input will set it true)"}</p>
+        <p>vflip:string {" vertical flip (any non-empty input will set it true)"}</p>
         <p>direction: string "rtl" {" (any other input will end in ltr direction)"}</p>
       </Stack>
     </div>
